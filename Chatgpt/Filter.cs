@@ -38,24 +38,34 @@ namespace Chatgpt
         public string DatasetDescription { get; set; }
         public List<Location> Location { get; set; }
 
-        public override string ToString()
-        {
-            StringBuilder weatherall = new StringBuilder();
-            foreach (var item in Location)
-            {
-                if (item != null && Location.Count > 0)
-                {
-                    var LocationName = item.LocationName;
-                    var ParameterName = item.WeatherElement[0].Time[0].Parameter.ParameterName;
-                    var MinT = item.WeatherElement[2].Time[0].Parameter.ParameterName;
-                    var MaxT = item.WeatherElement[4].Time[0].Parameter.ParameterName;
-                    var PoP = item.WeatherElement[1].Time[0].Parameter.ParameterName;
+        //public override string ToString()
+        //{
+        //    StringBuilder weatherall = new StringBuilder();
+        //    foreach (var item in Location)
+        //    {
+        //        if (item != null && Location.Count > 0)
+        //        {
+        //            var LocationName = item.LocationName;
+        //            var ParameterName = item.WeatherElement[0].Time[0].Parameter.ParameterName;
+        //            var MinT = item.WeatherElement[2].Time[0].Parameter.ParameterName;
+        //            var MaxT = item.WeatherElement[4].Time[0].Parameter.ParameterName;
+        //            var PoP = item.WeatherElement[1].Time[0].Parameter.ParameterName;
 
-                    weatherall.AppendLine($"區域:{LocationName} 天氣:{ParameterName} 溫度:{MinT}℃~{MaxT}℃ 降雨機率:{PoP}%");
+        //            weatherall.AppendLine($"區域:{LocationName} 天氣:{ParameterName} 溫度:{MinT}℃~{MaxT}℃ 降雨機率:{PoP}%");
 
-                }
-            }
-            return weatherall.ToString();
-        }
+        //        }
+        //    }
+        //    return weatherall.ToString();
+        //}
     }
+
+
+    public class LocationRecord
+    {
+        public string LocationName { get; set; }
+        public string weatherAll { get; set; }
+        public string TempRange { get; set; }
+        public string PoP { get; set; }
+    }
+
 }

@@ -28,46 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            comboBox1 = new ComboBox();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            Date_cb = new ComboBox();
+            Weatherdata_dg = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)Weatherdata_dg).BeginInit();
             SuspendLayout();
             // 
-            // comboBox1
+            // Date_cb
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(26, 23);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(410, 23);
-            comboBox1.TabIndex = 0;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            Date_cb.DropDownStyle = ComboBoxStyle.DropDownList;
+            Date_cb.FormattingEnabled = true;
+            Date_cb.Location = new Point(26, 23);
+            Date_cb.Name = "Date_cb";
+            Date_cb.Size = new Size(410, 23);
+            Date_cb.TabIndex = 0;
+            Date_cb.SelectedIndexChanged += Date_cb_SelectedIndexChanged;
             // 
-            // dataGridView1
+            // Weatherdata_dg
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(26, 70);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(410, 284);
-            dataGridView1.TabIndex = 1;
+            Weatherdata_dg.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            Weatherdata_dg.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Weatherdata_dg.Location = new Point(26, 70);
+            Weatherdata_dg.Name = "Weatherdata_dg";
+            Weatherdata_dg.ReadOnly = true;
+            Weatherdata_dg.RowTemplate.Height = 25;
+            Weatherdata_dg.Size = new Size(410, 284);
+            Weatherdata_dg.TabIndex = 1;
             // 
             // FrmHistory
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(461, 386);
-            Controls.Add(dataGridView1);
-            Controls.Add(comboBox1);
+            Controls.Add(Weatherdata_dg);
+            Controls.Add(Date_cb);
             Name = "FrmHistory";
             Text = "FrmHistory";
             Load += FrmHistory_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Weatherdata_dg).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private ComboBox comboBox1;
-        private DataGridView dataGridView1;
+        private ComboBox Date_cb;
+        private DataGridView Weatherdata_dg;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Chatgpt
 {
-    partial class Form1
+    partial class ApiTest
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,68 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
-            button1 = new Button();
-            textBox2 = new TextBox();
-            button2 = new Button();
+            Search_txt = new TextBox();
+            Send_btn = new Button();
+            Show_txt = new TextBox();
+            History_btn = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // Search_txt
             // 
-            textBox1.Location = new Point(37, 39);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(606, 23);
-            textBox1.TabIndex = 0;
-            textBox1.KeyDown += textBox1_KeyDown;
+            Search_txt.Location = new Point(37, 39);
+            Search_txt.Name = "Search_txt";
+            Search_txt.Size = new Size(606, 23);
+            Search_txt.TabIndex = 0;
             // 
-            // button1
+            // Send_btn
             // 
-            button1.Location = new Point(679, 39);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 1;
-            button1.Text = "送出";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            Send_btn.Location = new Point(679, 39);
+            Send_btn.Name = "Send_btn";
+            Send_btn.Size = new Size(75, 23);
+            Send_btn.TabIndex = 1;
+            Send_btn.Text = "送出";
+            Send_btn.UseVisualStyleBackColor = true;
+            Send_btn.Click += Send_btn_Click;
             // 
-            // textBox2
+            // Show_txt
             // 
-            textBox2.Location = new Point(37, 90);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(717, 318);
-            textBox2.TabIndex = 2;
+            Show_txt.Location = new Point(37, 90);
+            Show_txt.Multiline = true;
+            Show_txt.Name = "Show_txt";
+            Show_txt.Size = new Size(717, 318);
+            Show_txt.TabIndex = 2;
             // 
-            // button2
+            // History_btn
             // 
-            button2.Location = new Point(37, 423);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 3;
-            button2.Text = "歷史紀錄";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            History_btn.Location = new Point(37, 423);
+            History_btn.Name = "History_btn";
+            History_btn.Size = new Size(75, 23);
+            History_btn.TabIndex = 3;
+            History_btn.Text = "歷史紀錄";
+            History_btn.UseVisualStyleBackColor = true;
+            History_btn.Click += History_btn_Click;
             // 
-            // Form1
+            // ApiTest
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(787, 458);
-            Controls.Add(button2);
-            Controls.Add(textBox2);
-            Controls.Add(button1);
-            Controls.Add(textBox1);
-            Name = "Form1";
-            Text = "Form1";
+            Controls.Add(History_btn);
+            Controls.Add(Show_txt);
+            Controls.Add(Send_btn);
+            Controls.Add(Search_txt);
+            Name = "ApiTest";
+            Text = "ApiTest";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBox1;
-        private Button button1;
-        private TextBox textBox2;
-        private Button button2;
+        private TextBox Search_txt;
+        private Button Send_btn;
+        private TextBox Show_txt;
+        private Button History_btn;
     }
 }
